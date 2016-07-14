@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714192626) do
+ActiveRecord::Schema.define(version: 20160714192941) do
+
+  create_table "beers", force: :cascade do |t|
+    t.string  "name"
+    t.string  "description"
+    t.string  "tasting_notes"
+    t.integer "rating"
+    t.integer "brewery_id"
+    t.integer "user_id"
+  end
 
   create_table "breweries", force: :cascade do |t|
     t.string "name"
